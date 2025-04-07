@@ -1,9 +1,9 @@
 import React from 'react'
-
+import {Navbar} from './components/Navbar'
 const App = ()=>{
   return (
-    <div className='w-[80%] min-h-screen bg-red-500 m-auto'>
-      Welcome to the Home page
+    <div className='w-full h-screen bg-zinc-800 m-auto'>
+      <Navbar />
     </div>
   )
 }
