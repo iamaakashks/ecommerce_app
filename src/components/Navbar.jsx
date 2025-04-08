@@ -5,8 +5,8 @@ export const Navbar = ()=>{
     const [clicked, setClicked] = useState('')
     const navItems = ['Home', 'Men', 'Women', 'Kids']
     return (
-        <div className="h-[10%] text-white">
-            <div className="flex items-center h-full px-10 bg-red-500">
+        <div className="h-20 bg-red-500 text-white">
+            <div className="flex items-center h-full px-10">
                 <ul className="flex w-[70%] gap-28 justify-center">
                     {navItems.map((items)=>{
                         return (
@@ -17,7 +17,7 @@ export const Navbar = ()=>{
                     })}
                 </ul>
                 <div className="flex items-center w-[30%] justify-end gap-6">
-                    <button className="border-[1px] bg-gray-700 rounded-full px-4 py-1.5">Login</button>
+                    <Link to="/login"><button className="border-[1px] bg-gray-700 rounded-full px-4 py-1.5">Login</button></Link>
                     <button className="border-[1px] bg-gray-700 rounded-full px-4 py-1.5">Signup</button>
                     <FaCartShopping className="text-2xl cursor-pointer"/>
                 </div>
