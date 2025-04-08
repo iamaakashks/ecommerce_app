@@ -11,13 +11,12 @@ import { MainLayout } from './layouts/MainLayout.jsx';
 const App = ()=>{
   return (
     <>
-    <div className='w-full h-screen bg-zinc-600 m-auto'>
+    <div className='w-full h-screen bg-zinc-200 m-auto'>
       <Routes>
         <Route element={<MainLayout />}>
           <Route path='/' element={<Home />} />
           <Route path='/api/products' element={<Products />} />
           <Route path='/cart' element={<Cart />} />
-          <Route path='/category' element={<Category />} />
           <Route path='/category/men' element={<Category />} />
           <Route path='/category/women' element={<Category />} />
           <Route path='/category/kids' element={<Category />} />
