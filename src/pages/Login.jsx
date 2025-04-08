@@ -12,14 +12,14 @@ export const Login = ()=>{
             <div className='border-[1px] w-[30%] p-4 m-auto flex flex-col gap-6'>
                 <div className='flex justify-between items-center'>
                     <label for="email">Email</label>
-                    <input id='email' type='email' placeholder='Email' className='outline-none bg-transparent border-[1px] rounded-md px-2 py-2' />
+                    <input required id='email' type='email' placeholder='Email' className='w-3/5 outline-none bg-transparent border-[1px] rounded-md px-2 py-2' />
                 </div>
                 <div className='flex justify-between items-center'>
                     <label for="password">Password</label>
-                    <input id='password' type='password' placeholder='Password' className='outline-none bg-transparent border-[1px] rounded-md px-2 py-2' />
+                    <input required id='password' type='password' placeholder='Password' className='w-3/5 outline-none bg-transparent border-[1px] rounded-md px-2 py-2' />
                 </div>
                 <div className="flex justify-between">
-                    <button className='border-[1px] px-4 py-1.5 rounded-lg bg-green-700'>Login</button>
+                    <button className='border-[1px] px-4 py-1.5 rounded-lg bg-green-700 font-semibold'>Login</button>
                     <button className="cursor-pointer">Forgot Password?</button>
                 </div>
             </div>

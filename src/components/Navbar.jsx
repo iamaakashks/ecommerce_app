@@ -11,7 +11,7 @@ export const Navbar = ()=>{
                     {navItems.map((items)=>{
                         return (
                             <li key={items}>
-                                <Link to={`/${items.toLowerCase() === 'home' ? '':items.toLowerCase()}`} onClick={()=>setClicked(`${items}`)} className={`${clicked === items ? 'underline underline-offset-4 font-bold' : 'hover:underline-offset-4 hover:underline'} cursor-pointer`}>{items}</Link>
+                                <Link to={`/${items.toLowerCase() === 'home' ? '':`category/${items.toLowerCase()}`}`} onClick={()=>setClicked(`${items}`)} className={`${clicked === items ? 'underline underline-offset-4 font-bold' : 'hover:underline-offset-4 hover:underline'} cursor-pointer`}>{items}</Link>
                             </li>
                         )
                     })}
