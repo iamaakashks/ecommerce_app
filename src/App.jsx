@@ -11,7 +11,7 @@ import { MainLayout } from './layouts/MainLayout.jsx';
 const App = ()=>{
   return (
     <>
-    <div className='w-full h-screen bg-zinc-200 m-auto'>
+    <div className='w-full h-screen m-auto'>
       <Routes>
         <Route element={<MainLayout />}>
           <Route path='/' element={<Home />} />
