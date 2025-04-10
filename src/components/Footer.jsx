@@ -24,11 +24,11 @@ export default function Footer(){
     }
     return (
         <div className="w-full px-20 py-10">
-            <ul className="flex justify-center gap-8 mb-12">
+            <ul className="flex justify-center gap-10 h-12">
                 {
                     footerLinks.map(
                         (link, index)=>
-                            <li key={index}>
+                            <li className="hover:scale-110 transform-all duration-300" key={index}>
                             {
                                 (link === 'office' || link === 'company') ? (
                                     <button onClick={officeLink}>
