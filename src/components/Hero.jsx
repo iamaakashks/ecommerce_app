@@ -33,6 +33,7 @@ export default function Hero(){
                 <button onClick={(e)=>handleClick(e)} className='group absolute left-10 bottom-8 border-[1px] py-2.5 px-4 backdrop-blur-md bg-black/30 text-white rounded-full flex items-center gap-1'>shop for {currentImage.category}<IoIosArrowDropright className="text-3xl transition-all duration-700 group-hover:translate-x-2"/></button>
                 <div className='absolute bottom-8 right-10 text-white text-4xl flex gap-1'>
                     <GoChevronLeft onClick={setPrev} className='backdrop-blur-sm transition-all duration-300 hover:pr-2'/>
+                    <h4 className='text-2xl'>{currentIndex+1} / {images.length}</h4>
                     <GoChevronRight onClick={setNext} className='backdrop-blur-sm transition-all duration-300 hover:pl-2'/>
                 </div>
             </div>

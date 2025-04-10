@@ -32,9 +32,7 @@ export const Navbar = ()=>{
                     <Link to='/'>House of Mandal</Link>
                 </div>
                 <div className="flex items-center w-[35%] justify-end gap-6">
-                    <Link to="/login"><button className="border-[1px] border-black rounded-full px-4 py-1.5">Login</button></Link>
-                    <button className="border-[1px] border-black rounded-full px-4 py-1.5">Signup</button>
-                    <FaCartShopping className="text-2xl cursor-pointer"/>
+                    <Link to="/login"><button className="border-[1px] border-black rounded-full px-4 py-1.5">Login</button></Link>                    <FaCartShopping className="text-2xl cursor-pointer"/>
                 </div>
             </div>
         </div>
