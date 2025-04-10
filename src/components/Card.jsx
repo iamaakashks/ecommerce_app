@@ -15,7 +15,8 @@ export default function Card({item}){
 
             <div className="p-4 bg-white">
                 <h1 className="text-base font-semibold mb-2">{item.title}</h1>
-                <p className="text-sm text-gray-800 font-medium">₹ {priceInRs}</p>
+                <p className="text-sm text-gray-800 font-medium mb-2">₹ {priceInRs}</p>
+                <button className="px-3 py-1.5 bg-black text-white rounded-md">Add to Cart</button>
             </div>
         </div>
     )
