@@ -7,6 +7,8 @@ import {Cart} from './pages/Cart.jsx'
 import {Category} from './pages/Category.jsx'
 import {Login} from './pages/Login.jsx'
 import { MainLayout } from './layouts/MainLayout.jsx';
+import Footer from './components/Footer.jsx'
+import {About} from './components/About.jsx'
 
 const App = ()=>{
   return (
@@ -18,9 +20,11 @@ const App = ()=>{
           <Route path='/api/products' element={<Products />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/category/:categoryName' element={<Category />} />
+          <Route path='/about' element={<About />}></Route>
         </Route>
           <Route path='/login' element={<Login />} />
       </Routes>
+      <Footer />
     </div>
     </>
   )
