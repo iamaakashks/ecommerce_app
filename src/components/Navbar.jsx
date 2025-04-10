@@ -28,7 +28,7 @@ export const Navbar = ()=>{
                         }
                     </select>
                 </div>
-                <div className="text-white w-[30%] h-full items-center bg-black flex justify-center text-3xl">
+                <div className="hover:bg-white hover:text-black transform-all duration-300 text-white w-[30%] h-full items-center bg-black flex justify-center text-3xl">
                     <Link to='/'>House of Mandal</Link>
                 </div>
                 <div className="flex items-center w-[35%] justify-end gap-6">

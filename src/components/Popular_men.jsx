@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { products } from '../api/product.js'
-import Card from "./Card.jsx"
+import Card from "./Card.jsx";
+import {Link} from 'react-router-dom';
 
 export default function Popular_men(){
     const [productList, setProductList] = useState([]);
@@ -8,7 +9,6 @@ export default function Popular_men(){
         const loadProducts = async ()=>{
             try{
                 const getProducts = await products();
-                console.log(getProducts)
                 setProductList(getProducts);
             }catch(error){
                 console.log(error.message)
@@ -17,18 +17,17 @@ export default function Popular_men(){
         loadProducts();
     }, [])
     const menData = productList.filter(item => item.category.toLowerCase() === "men's clothing")
-    console.log(menData)
     return (
-        <div className='bg-gradient-to-b from-gray-300 to-white w-full p-5'>
+        <div className='bg-gradient-to-b from-white to-gray-300 w-full p-5'>
             <h1 className='font-thin text-3xl mb-4'>Popular in Men</h1>
-            <div className='w-full flex mb-4'>
+            <div className='w-full flex mb-10'>
                 {
                     menData.map((item, index)=>{
                         return <Card key={index} item={item} />
                     })
                 }
             </div>
-            <button className='px-3 py-1.5 rounded-full border-[1px] border-black'>See All</button>
+            <Link to='/category/men' className='px-3 py-1.5 rounded-full border-[1px] border-black'>See All</Link>
         </div>
     )
 }

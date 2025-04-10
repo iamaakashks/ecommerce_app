@@ -17,9 +17,7 @@ const App = ()=>{
           <Route path='/' element={<Home />} />
           <Route path='/api/products' element={<Products />} />
           <Route path='/cart' element={<Cart />} />
-          <Route path='/category/men' element={<Category />} />
-          <Route path='/category/women' element={<Category />} />
-          <Route path='/category/kids' element={<Category />} />
+          <Route path='/category/:categoryName' element={<Category />} />
         </Route>
           <Route path='/login' element={<Login />} />
       </Routes>
