@@ -8,7 +8,7 @@ export const Login = ()=>{
     const [confirmPassword, setConfirmPassword] = useState('');
     const handleCreateButton = (e)=>{
         e.preventDefault();
-        if(password === confirmPassword && password.length() > 6 && password.trim()!=''){
+        if(password === confirmPassword && password.length > 6 && password.trim()!=''){
             alert('Account Created Successfully')
         }else{
             alert("Password must match Re-enter password\nPassword must be of 6 characters\nPassword can't be just spaces");
@@ -31,7 +31,6 @@ export const Login = ()=>{
                     <input onChange={
                         (e)=>{
                             setPassword(e.target.value);
-                            console.log(password)
                         }
                     } value={password} required id='password' type='text' placeholder='Password' className='w-3/5 outline-none bg-transparent border-black border-[1px] rounded-md px-2 py-2' />
                 </div>
@@ -40,7 +39,6 @@ export const Login = ()=>{
                     <input onChange={
                         (e)=>{
                             setConfirmPassword(e.target.value);
-                            console.log(confirmPassword)
                         }
                     } value={confirmPassword} required id='confirmpassword' type='password' placeholder='Password' className='w-3/5 outline-none bg-transparent border-black border-[1px] rounded-md px-2 py-2' />
                 </div>

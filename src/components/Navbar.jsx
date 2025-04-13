@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaCartShopping } from "react-icons/fa6";
 import { Link, useNavigate } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
+import { CartContext } from "../context/CartContext.jsx";
+
 export const Navbar = ()=>{
+    const {cartCount} = useContext(CartContext)
     const navigate = useNavigate();
     const options = ['Category', 'Men', 'Women', 'Kids'];
     const [category, setCategory] = useState('');
@@ -15,6 +18,9 @@ export const Navbar = ()=>{
         }
     }
     
+    const handleClick = ()=>{
+        navigate('/cart');
+    }
     return (
         <div className="h-20">
             <div className="flex items-center h-full px-10">
@@ -32,7 +38,13 @@ export const Navbar = ()=>{
                     <Link to='/'>House of Mandal</Link>
                 </div>
                 <div className="flex items-center w-[35%] justify-end gap-6">
-                    <Link to="/login"><button className="border-[1px] border-black rounded-full px-4 py-1.5">Login</button></Link>                    <FaCartShopping className="text-2xl cursor-pointer"/>
+                    <Link to="/login"><button className="border-[1px] border-black rounded-full px-4 py-1.5">Login</button></Link>
+                    <div className="relative">
+                        <FaCartShopping onClick={handleClick} className="text-2xl cursor-pointer" />
+                        <div className=" bg-white w-4 flex text-black text-xs absolute -top-2 rounded-full -right-2">
+                            <p className="m-auto">{cartCount}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
