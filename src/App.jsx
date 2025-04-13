@@ -9,6 +9,7 @@ import {Login} from './pages/Login.jsx'
 import { MainLayout } from './layouts/MainLayout.jsx';
 import Footer from './components/Footer.jsx'
 import {About} from './components/About.jsx'
+import Contact from './components/Contact.jsx'
 
 const App = ()=>{
   return (
@@ -21,6 +22,7 @@ const App = ()=>{
           <Route path='/cart' element={<Cart />} />
           <Route path='/category/:categoryName' element={<Category />} />
           <Route path='/about' element={<About />}></Route>
+          <Route path='/contact' element={<Contact />}></Route>
         </Route>
           <Route path='/login' element={<Login />} />
       </Routes>
